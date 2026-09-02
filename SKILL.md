@@ -1,55 +1,46 @@
 ---
 name: base44-prompt-builder
 description: >
-  Skill para construir apps web com Base44: backend integrado, entidades de negócio, sem código. Ideal para ferramentas internas, dashboards e protótipos rápidos. Use quando o usuário quiser usar Base44.
+  Guides planning, building, repairing, testing and releasing managed web apps with the current Base44 builder, Code tab, GitHub sync and CLI. Use when the user mentions Base44, Base44 entities, functions, agents, connectors, local development, eject, or asks for structured Base44 prompts. Inspect the existing app and choose managed-platform trade-offs explicitly.
 license: MIT
 ---
 
 # Base44 Prompt Builder
 
+This skill treats Base44 as a managed application platform with editable/exportable code and proprietary service semantics. It does not repeat the obsolete claim that users never receive code.
+
 ## Origin version check
 
-At the start of a meaningful use, check whether this skill has a newer upstream version.
-The canonical source is:
+Canonical source:
 
 ```text
 https://github.com/AndreAlmeidaDC/base44-prompt-builder
 ```
 
-If a newer version exists, summarize what changed and ask the user whether to update
-before proceeding. Never self-update silently. For the detailed protocol, read
-`references/version-check.md`.
+At meaningful use, follow `references/version-check.md`. Never self-update silently.
 
-*Autor: André Almeida*
+## Load order
 
----
+1. Read `references/vibecode-core.md`.
+2. Read `references/platform-base44.md`.
+3. Use `references/archetypes.md` only when platform choice is open.
+4. Apply the smallest project mode that fits.
 
-## Quando usar esta skill
+## Non-negotiable boundaries
 
-Use esta skill quando o usuário mencionar Base44, ou quiser construir uma ferramenta interna, dashboard ou protótipo rápido sem se preocupar com o código.
+- Inspect existing app, repository or exported code before prescribing structure.
+- Separate builder app, GitHub-synced app, CLI backend project and ejected project.
+- Model entities, functions, agents, connectors and auth only when required.
+- Treat data ownership, service dependency and exit path as architecture decisions.
+- Test locally or in a clone before changing live resources.
+- Do not push auth, deploy resources, publish, connect production data, spend money or perform external writes without explicit approval.
 
-Se não tiver certeza se esta é a plataforma certa, leia `references/archetypes.md`
-para um guia de escolha.
+## Output
 
----
+Return only the artifact needed now: app knowledge, Discuss/plan prompt, entity contract, atomic build prompt, local/CLI prompt, verification prompt or exit plan.
 
-## Como esta skill funciona
+## Change history
 
-Esta skill usa um processo compartilhado (vibecode CORE) + detalhes específicos
-do Base44:
-
-1. **Carregue `references/vibecode-core.md`** — processo completo de especificação
-   e execução (intake, modelagem, branding, validação, geração, reancoragem).
-
-2. **Carregue `references/platform-base44.md`** — vocabulário, perguntas adicionais,
-   formatos de artefato e especificidades do Base44.
-
-3. Execute o fluxo do CORE usando os detalhes da plataforma onde aplicável.
-
----
-
-## Histórico de Alterações
-
-| Data | Versão | Alterações |
+| Date | Version | Change |
 |---|---|---|
-| 2026.06.16 | 2026.06.16 | Criação da skill no formato vibecode: CORE compartilhado + referência específica de plataforma. |
+| 2026-09-02 | 2026.09.02 | Rebuilt around current code access, GitHub sync, CLI/local development, eject, managed services, agents/connectors and explicit exit planning. |
