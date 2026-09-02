@@ -1,26 +1,20 @@
 {
   "name": "base44-prompt-builder",
-  "version": "2026.06.23",
-  "last_standardized_at": "2026.06.23 GMT-3",
-  "description": "Vibecode skill for building web apps with Base44's integrated backend. Entity-first, no-code approach for internal tools, dashboards and rapid prototypes.",
+  "version": "2026.09.02",
+  "last_standardized_at": "2026-09-02 GMT-3",
+  "description": "Workflow skill for current Base44 builder, Code tab, GitHub sync, CLI, local development, managed backend resources and exit planning.",
   "license": "MIT",
   "origin_url": "https://github.com/AndreAlmeidaDC/base44-prompt-builder",
   "origin_git_url": "https://github.com/AndreAlmeidaDC/base44-prompt-builder.git",
   "family": "vibecode-prompt-builder",
   "platform": "Base44",
-  "update_policy": "version-check.md",
+  "maturity": "beta",
+  "platform_claims_verified_at": "2026-09-02",
+  "supported_project_modes": ["managed-builder-app", "github-synced-app", "cli-backend-project", "existing-project-repair", "prototype"],
+  "confirmation_required_for": ["deploy", "publish", "auth-push", "production-data", "connector-write", "financial-action", "eject-or-migration"],
   "declared_capabilities": {
-    "network_egress": {
-      "expected": false,
-      "reason": "Prompt-generation skill; performs no network calls."
-    },
-    "subprocess": {
-      "expected": false,
-      "reason": "No subprocess execution."
-    },
-    "dependency_install": {
-      "expected": false,
-      "reason": "No package installation."
-    }
+    "network_egress": {"expected": true, "reason": "The host may inspect current Base44 documentation, app state, GitHub repositories and public references."},
+    "subprocess": {"expected": true, "reason": "Local and CLI workflows may run reviewed Base44, Node and test commands."},
+    "dependency_install": {"expected": true, "reason": "CLI and project dependencies may be installed after manifest and environment review."}
   }
 }

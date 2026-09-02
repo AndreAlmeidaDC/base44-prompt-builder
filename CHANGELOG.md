@@ -1,8 +1,6 @@
 # Changelog
 
-All notable changes to this skill are documented here.
-
-| Date | Time | Version | Changes |
-|---|---|---|---|
-| 2026.06.23 | 14:26 GMT-3 | 2026.06.23 | Acessibilidade web opcional: gate na Fase 1 do core, referencia accessibility-web.md (credito A11Y.md, MIT), criterios nos checklists das Fases 5 e 6, FAQ e estrutura no README. |
-| 2026.06.16 | 12:00 GMT-3 | 2026.06.16 | Initial release as part of the vibecode-prompt-builder family. CORE shared process + Base44-specific reference. |
+| Date | Version | Changes |
+|---|---|---|
+| 2026-09-02 | 2026.09.02 | Breaking rewrite: corrected code ownership/export claims; added Code tab, GitHub two-way sync, CLI/local development, eject, typed resources, managed-service boundaries, data-safe verification and exit planning. |
+| 2026-06-23 | 2026.06.23 | Legacy entity-first/no-source-code workflow. Superseded. |
